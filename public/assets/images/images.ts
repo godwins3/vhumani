@@ -1,0 +1,1 @@
+export {default as VhunamiLogo} from './vhunami-logo.png'
