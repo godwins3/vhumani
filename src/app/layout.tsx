@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
 import { VhumaniLogo } from "../../public/assets/images/images";
 import { ThemeProvider } from "@/components/theme-provider";
+import VhumaniFooter from "@/components/layouts/Footer";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'Discover Vhumani, a platform connecting businesses with influencers to drive real engagement and impactful marketing campaigns.',
     images: [
       {
-        url: VhumaniLogo.src, // Ensure VhumaniLogo is correctly imported
+        url: VhumaniLogo.src,
         width: 1200,
         height: 630,
         alt: 'Vhumani Logo',
@@ -60,6 +60,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({
@@ -70,15 +75,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`  ${inter.className} antialiased `}
+        className={`${inter.className} antialiased min-h-screen flex flex-col`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="system" 
+          enableSystem 
+          disableTransitionOnChange
+        >
           <Header />
-          {children}
-          <Footer />
+          <main className="flex-1 w-full">
+            {children}
+          </main>
+          <VhumaniFooter />
         </ThemeProvider>
-
-
       </body>
     </html>
   );
