@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
-import { VhumaniLogo } from "../../public/assets/images/images";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/layouts/theme-provider";
 import VhumaniFooter from "@/components/layouts/Footer";
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vhumani.com'),
+  metadataBase: new URL('https://vhumani.co.ke'),
   title: {
     default: 'Vhumani | Bridging Brands and Influencers',
     template: '%s | Vhumani',
@@ -36,13 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vhumani.com',
+    url: 'https://vhumani.co.ke',
     siteName: 'Vhumani',
     title: 'Vhumani - Bridging Brands and Influencers',
     description: 'Discover Vhumani, a platform connecting businesses with influencers to drive real engagement and impactful marketing campaigns.',
     images: [
       {
-        url: VhumaniLogo.src,
+        url: "/assets/images/vhumani-logo.png",
         width: 1200,
         height: 630,
         alt: 'Vhumani Logo',

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
-import { LisaImg, MikeImg, SarahImg } from '../../public/assets/images/images';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,21 +8,21 @@ const ClientTestimonialsSection = () => {
         {
             name: "Sarah Katheu",
             title: "CEO, Organic Skincare Co.",
-            avatar: SarahImg, // Replace with your actual image path
+            avatar: "/assets/images/Sarah.jpg", // Replace with your actual image path
             testimonial: "Vhumani helped us find micro-influencers who genuinely love our products. Our campaign resulted in a 300% ROI, something we never achieved with traditional ads.",
             rating: 5
         },
         {
             name: "Mike Omollo",
             title: "Fitness Influencer (250K followers)",
-            avatar: MikeImg, // Replace with your actual image path
+            avatar: "/assets/images/Mike.jpg", // Replace with your actual image path
             testimonial: "As a content creator, Vhumani makes it so easy to find brands that align with my values. The payment system is secure and I've doubled my income since joining.",
             rating: 5
         },
         {
             name: "Lisa Anari",
             title: "Marketing Director, TechStart",
-            avatar: LisaImg, // Replace with your actual image path
+            avatar: "/assets/images/Lisa.jpg", // Replace with your actual image path
             testimonial: "The analytics dashboard is incredible. We can track exactly which influencers drive the most conversions, helping us optimize our marketing spend.",
             rating: 4.5
         }
@@ -88,6 +87,8 @@ const ClientTestimonialsSection = () => {
                                         <Image
                                             src={testimonial.avatar}
                                             alt={testimonial.name}
+                                            width={400}
+                                            height={300}
                                             className="w-full h-full rounded-full object-cover bg-white dark:bg-gray-800"
                                         />
                                     </div>
@@ -116,7 +117,7 @@ const ClientTestimonialsSection = () => {
 
                 {/* CTA Link */}
                 <div className="text-center">
-                    <Link href="/pages/about-us">
+                    <Link href="/about-us">
                         <button className="group inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold text-lg transition-colors duration-300">
                             Read more success stories
                             <ArrowRight

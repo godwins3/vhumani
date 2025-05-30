@@ -1,24 +1,23 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { MarketIcon1, MarketIcon2, SearchIcon } from '../../public/assets/icons/icons';
 
 const WhatWeDoSection = () => {
   const services = [
     {
-      icon: SearchIcon,
+      icon: "/assets/icons/searchicon.png",
       title: 'Matchmaking',
       description: 'Our AI-powered platform matches businesses with influencers who align with their brand values and target audience.',
       gradient: 'from-teal-400 to-cyan-500',
     },
     {
-      icon: MarketIcon1,
+      icon: "/assets/icons/marketicon.png",
       title: 'Campaign Management',
       description: 'We provide tools to manage your influencer campaigns from start to finish, including performance tracking.',
       gradient: 'from-blue-400 to-indigo-500',
     },
     {
-      icon: MarketIcon2,
+      icon: "/assets/icons/market2icon.png",
       title: 'Secure Payments',
       description: 'Our escrow system ensures influencers get paid when they deliver, and businesses only pay for results.',
       gradient: 'from-emerald-400 to-teal-500',

@@ -4,7 +4,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, } from 'lucide-react'
-import { Heroimg } from '../../public/assets/images/images'
 
 // interface HeroSectionProps {
 //   backgroundImage?: string;
@@ -16,7 +15,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={Heroimg}
+          src="/assets/images/finding-matches.png" 
           alt="Tech workspace background"
           fill
           className="object-cover object-center"
@@ -38,15 +37,13 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white">
-              Connect with the Right Influencers{' '}
-             
-                
+            <h1 className="text-3xl sm:text-4xl lg:text-3xl xl:text-4xl font-bold leading-tight text-white">
+              Amplify Your Brand With Influencer Partnerships{' '}
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Vhumani bridges the gap between businesses and influencers to create{' '}
-              <span className="font-semibold text-white">powerful marketing campaigns</span>.
+              Connect with top influencers to elevate your marketing campaigns and reach your{' '}
+              <span className="font-semibold text-white">target audience effectively</span>.
             </p>
           </div>
 

@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { VhumaniLogo } from '../../../public/assets/images/images'
+// import { VhumaniLogo } from '../../../public/assets/images/images'
 import Image from 'next/image'
-import { ModeToggle } from '../mode-toggle'
+import { ModeToggle } from '@/components/layouts/mode-toggle'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,10 +16,10 @@ const Header = () => {
 
   const navigationLinks = [
     { href: '/', label: 'Home' },
-    { href: '/pages/for-businesses', label: 'For Businesses' },
-    { href: '/pages/for-influencers', label: 'For Influencers' },
-    { href: '/pages/about-us', label: 'About Us' },
-    { href: '/pages/contact-us', label: 'Contact Us' },
+    { href: '/for-businesses', label: 'For Businesses' },
+    { href: '/for-influencers', label: 'For Influencers' },
+    { href: '/about-us', label: 'About Us' },
+    { href: '/contact-us', label: 'Contact Us' },
   ]
 
   // Handle scroll effect
@@ -76,7 +76,7 @@ const Header = () => {
               aria-label="Vhumani Home"
             >
               <div className='flex items-center'>
-                <Image src={VhumaniLogo} alt='logo' width={200} height={150} />
+                <Image src="/assets/vhumani-logo.png" alt='logo' width={200} height={150} />
               </div>
              
             </Link>

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { FindingMatches, HowVhumaniWorks, LauchingCampaign, MeasuringResults } from '../../public/assets/images/images';
 
 const HowVhumaniWorksSection = () => {
   const steps = [
@@ -8,28 +7,28 @@ const HowVhumaniWorksSection = () => {
       number: 1,
       title: "Create Your Profile",
       description: "Businesses describe their brand and campaign goals. Influencers showcase their audience and content style.",
-      image: HowVhumaniWorks, // Replace with your actual image path
+      image: '/assets/images/how-vhumani-works.png', // Replace with your actual image path
       position: "right"
     },
     {
       number: 2,
       title: "Find Your Match",
       description: "Our algorithm suggests the best matches, or you can browse and search our database of influencers/brands.",
-      image: FindingMatches, // Replace with your actual image path
+      image: "/assets/images/finding-matches.png", // Replace with your actual image path
       position: "left"
     },
     {
       number: 3,
       title: "Launch Campaign",
       description: "Agree on deliverables, timeline, and compensation. Our platform helps manage the entire collaboration.",
-      image: LauchingCampaign, // Replace with your actual image path
+      image: "/assets/images/launching-campaign.png", // Replace with your actual image path
       position: "right"
     },
     {
       number: 4,
       title: "Measure Results",
       description: "Track engagement, reach, and conversions. Get detailed analytics to measure your campaign's success.",
-      image: MeasuringResults, // Replace with your actual image path
+      image: "/assets/images/measuring-results.png", // Replace with your actual image path
       position: "left"
     }
   ];
@@ -80,6 +79,8 @@ const HowVhumaniWorksSection = () => {
                           <Image
                             src={step.image}
                             alt={step.title}
+                            width={400}
+                            height={300}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -124,6 +125,8 @@ const HowVhumaniWorksSection = () => {
                             <Image
                               src={step.image}
                               alt={step.title}
+                              width={400}
+                              height={300}
                               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
                           </div>
@@ -139,6 +142,8 @@ const HowVhumaniWorksSection = () => {
                             <Image
                               src={step.image}
                               alt={step.title}
+                              width={400}
+                              height={300}
                               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
                           </div>
