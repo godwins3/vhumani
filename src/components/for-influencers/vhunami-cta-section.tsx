@@ -19,7 +19,7 @@ const VhumaniCTASection = () => {
                 Ready to elevate Your Influence?
               </h2>
               <p className="text-lg sm:text-xl text-teal-50 dark:text-teal-100 max-w-2xl leading-relaxed">
-                Join Vhumani and start collaborating with top brands today. Whether you're just starting out or an established creator, we have opportunities for you.
+                Join Vhumani and start collaborating with top brands today. Whether you&apos;re just starting out or an established creator, we have opportunities for you.
               </p>
             </div>
 
