@@ -19,7 +19,7 @@ const VhumaniCTASection = () => {
                 Ready to elevate Your Marketing strategy?
               </h2>
               <p className="text-lg sm:text-xl text-teal-50 dark:text-teal-100 max-w-2xl leading-relaxed">
-                Join Vhumani and connect with influencers who can amplify your brand's reach and engagement.
+                Join Vhumani and connect with influencers who can amplify your brand&apos;s reach and engagement.
               </p>
             </div>
 
