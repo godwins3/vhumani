@@ -15,14 +15,14 @@ const ClientTestimonialsSection = () => {
         {
             name: "Mike Omollo",
             title: "Fitness Influencer (250K followers)",
-            avatar: "/assets/images/Mike.jpg", // Replace with your actual image path
+            avatar: "/assets/images/mike.jpg", // Replace with your actual image path
             testimonial: "As a content creator, Vhumani makes it so easy to find brands that align with my values. The payment system is secure and I've doubled my income since joining.",
             rating: 5
         },
         {
             name: "Lisa Anari",
             title: "Marketing Director, TechStart",
-            avatar: "/assets/images/Lisa.jpg", // Replace with your actual image path
+            avatar: "/assets/images/lisa.jpg", // Replace with your actual image path
             testimonial: "The analytics dashboard is incredible. We can track exactly which influencers drive the most conversions, helping us optimize our marketing spend.",
             rating: 4.5
         }
