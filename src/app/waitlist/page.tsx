@@ -18,7 +18,7 @@ const waitlist = () => {
                 </CardHeader>
                 <CardContent className="flex flex-col items-center">
                     <div className="text-gray-600 dark:text-gray-400 text-lg md:text-xl text-center space-y-4">
-                        <p>Thank you for your interest! We are still working on our product and will notify you as soon as it's ready.</p>
+                        <p>Thank you for your interest! We are still working on our product and will notify you as soon as it&apos;s ready.</p>
                         <p>In the meantime, feel free to check out our website for updates and more information.</p>
                         <p>We are excited to have you on this journey with us!</p>
                     </div>
