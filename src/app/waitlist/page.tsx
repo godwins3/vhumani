@@ -14,7 +14,7 @@ const waitlist = () => {
         <div className="min-h-screen bg-white dark:bg-slate-900 flex items-center justify-center p-4">
             <Card className="w-full max-w-3xl bg-white dark:bg-gray-800">
                 <CardHeader className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-blue-500 text-center">
-                    You're on the waitlist
+                    You&apos;re on the waitlist
                 </CardHeader>
                 <CardContent className="flex flex-col items-center">
                     <div className="text-gray-600 dark:text-gray-400 text-lg md:text-xl text-center space-y-4">
