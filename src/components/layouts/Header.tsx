@@ -76,7 +76,7 @@ const Header = () => {
               aria-label="Vhumani Home"
             >
               <div className='flex items-center'>
-                <Image src="/assets/vhumani-logo.png" alt='logo' width={200} height={150} />
+                <Image src="/assets/images/vhumani-logo.png" alt='logo' width={200} height={150} />
               </div>
              
             </Link>
