@@ -2,15 +2,38 @@
 
 import React, { useState } from 'react';
 import { Check, Users, BarChart3 } from 'lucide-react';
+import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
 
 const VhumaniWaitlist = () => {
-  const [selectedTab, setSelectedTab] = useState('Business');
+  const [selectedTab, setSelectedTab] = useState<'Business' | 'Influencer'>('Business');
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     handle: '',
     newsletter: false
+  });
+  const [message, setMessage] = useState<string | null>(null);
+
+  const mutation = useMutation({
+    mutationFn: async (data: typeof formData & { type: string }) => {
+      const res = await axios.post("/api/v1/waitlist", data);
+      return res.data;
+    },
+    onSuccess: () => {
+      setMessage("Thanks for joining the waitlist!");
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        handle: '',
+        newsletter: false
+      });
+    },
+    onError: (error: any) => {
+      setMessage(error?.response?.data?.error || "Something went wrong.");
+    },
   });
 
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -23,8 +46,8 @@ const VhumaniWaitlist = () => {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setMessage(null);
+    mutation.mutate({ ...formData, type: selectedTab });
   };
 
   return (
@@ -158,9 +181,15 @@ const VhumaniWaitlist = () => {
               <button
                 onClick={handleSubmit}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+                disabled={mutation.isPending}
               >
-                Join the Waitlist
+                {mutation.isPending ? "Submitting..." : "Join the Waitlist"}
               </button>
+              {message && (
+                <div className="text-center text-sm mt-2 text-blue-700 dark:text-blue-300">
+                  {message}
+                </div>
+              )}
             </div>
           </div>
 

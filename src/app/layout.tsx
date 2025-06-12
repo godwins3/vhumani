@@ -4,10 +4,14 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import { ThemeProvider } from "@/components/layouts/theme-provider";
 import VhumaniFooter from "@/components/layouts/Footer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import QueryProvider from "@/providers/query-client-provider";
+import { EnhancedErrorBoundary } from "@/components/error-handling/error-boundary";
+import SessionProvider from "@/providers/session-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
-const queryClient = new QueryClient();
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vhumani.co.ke'),
@@ -73,6 +77,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const queryClient = new QueryClient();
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -84,13 +89,12 @@ export default function RootLayout({
           enableSystem 
           disableTransitionOnChange
         >
-          <QueryClientProvider client={queryClient}>
-            <Header />
-            <main className="flex-1 w-full">
-              {children}
-            </main>
-            <VhumaniFooter />
-          </QueryClientProvider>
+          <SessionProvider>
+            <EnhancedErrorBoundary>
+              <QueryProvider>{children}</QueryProvider>
+            </EnhancedErrorBoundary>
+            <Toaster />
+        </SessionProvider>
         </ThemeProvider>
       </body>
     </html>
