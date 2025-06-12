@@ -4,8 +4,10 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import { ThemeProvider } from "@/components/layouts/theme-provider";
 import VhumaniFooter from "@/components/layouts/Footer";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
+const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vhumani.co.ke'),
@@ -82,11 +84,13 @@ export default function RootLayout({
           enableSystem 
           disableTransitionOnChange
         >
-          <Header />
-          <main className="flex-1 w-full">
-            {children}
-          </main>
-          <VhumaniFooter />
+          <QueryClientProvider client={queryClient}>
+            <Header />
+            <main className="flex-1 w-full">
+              {children}
+            </main>
+            <VhumaniFooter />
+          </QueryClientProvider>
         </ThemeProvider>
       </body>
     </html>
