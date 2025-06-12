@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 const WhatWeDoSection = () => {
   const services = [
@@ -80,10 +82,10 @@ const WhatWeDoSection = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg">
+          <Button className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg" onClick={() => window.location.href = '/about-us'}>
             Learn More About Our Platform
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </Button>
         </div>
       </div>
     </section>

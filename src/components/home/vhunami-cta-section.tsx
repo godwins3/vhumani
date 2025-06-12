@@ -1,10 +1,13 @@
 "use client"
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const VhumaniCTASection = () => {
+  const router = useRouter();
   const handleGetStarted = () => {
-    console.log('Get Started clicked');
+    // console.log('Get Started clicked');
+    router.push('/#waitlist'); // Navigate to the Get Started page
     // Handle navigation or action here
   };
 
