@@ -6,11 +6,14 @@ import VhumaniWaitlist from '@/components/home/vhunami-join-waitlist'
 import ClientTestimonialsSection from '@/components/home/what-client-say'
 import WhatWeDoSection from '@/components/home/what-we-do'
 import WhatWeDoTextSection from '@/components/home/what-we-do-text-section'
+import VhumaniFooter from '@/components/layouts/Footer'
+import Header from '@/components/layouts/Header'
 import React from 'react'
 
 const HomePage = () => {
   return (
     <div className="w-full">
+      <Header />
       <HeroSection />
       <StatsSection />
       <WhatWeDoSection />
@@ -19,9 +22,7 @@ const HomePage = () => {
       <ClientTestimonialsSection />
       <VhumaniWaitlist />
       <VhumaniCTASection />
-      
-    
-      
+      <VhumaniFooter />
     </div>
   )
 }

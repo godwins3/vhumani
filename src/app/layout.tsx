@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: 'Discover Vhumani, a platform connecting businesses with influencers to drive real engagement and impactful marketing campaigns.',
     images: [
       {
-        url: "/vhumani-logo.jpeg",
+        url: "/vhumani-logo.png",
         width: 1200,
         height: 630,
         alt: 'Vhumani Logo',
