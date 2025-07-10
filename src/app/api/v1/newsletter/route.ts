@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     const client = new MongoClient(uri);
     await client.connect();
     const db = client.db(dbName);
-    const collection = db.collection("waitlist");
+    const collection = db.collection("newsletter");
 
     // Prevent duplicate emails
     const existing = await collection.findOne({ email });
@@ -28,6 +28,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json({ error: "Server error" }, { status: 500 } );
   }
 }
