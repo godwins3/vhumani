@@ -9,6 +9,7 @@ import QueryProvider from "@/providers/query-client-provider";
 import { EnhancedErrorBoundary } from "@/components/error-handling/error-boundary";
 import SessionProvider from "@/providers/session-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -91,6 +92,7 @@ export default function RootLayout({
         >
           <SessionProvider>
             <EnhancedErrorBoundary>
+              <Analytics />
               <QueryProvider>{children}</QueryProvider>
             </EnhancedErrorBoundary>
             <Toaster />
