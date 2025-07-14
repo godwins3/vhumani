@@ -15,16 +15,15 @@ const WhatWeDoTextSection = () => {
           {/* Main Content */}
           <div className="space-y-6 md:space-y-8">
             <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-              Vhumani creates meaningful connections between brands and influencers
-              for authentic marketing campaigns. Exquisite sophisticated iconic cutting-edge
-              laborum deserunt esse bureaux cupidatat id minim.
+              Vhumani connects businesses with the right influencers to create powerful, 
+              data-driven marketing campaigns. Our platform streamlines discovery, 
+              collaboration, and performance tracking—helping brands grow and influencers thrive.
             </p>
             
             <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-              Sharp classic the best commodo nostrud delightful. Conversation aute wifey id. Qui
-              sunt remarkable deserunt intricate airport excepteur classic esse riot girl.
-              Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki
-              excepteur Basset hound. Zürich sleepy perfect consectetur.
+              Smart, seamless, and results-focused. Whether you’re launching a product or scaling your presence, 
+              Vhumani makes the process intuitive. We match ambition with influence, creativity with reach, 
+              and vision with verified results.
             </p>
           </div>
         </div>
