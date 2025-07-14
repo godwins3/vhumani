@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import { Check, Users, BarChart3 } from 'lucide-react';
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import WaitlistSuccessModal from '../shared/waitlist-success-modal';
 
 const VhumaniWaitlist = () => {
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [selectedTab, setSelectedTab] = useState<'Business' | 'Influencer'>('Business');
   const [formData, setFormData] = useState({
     firstName: '',
@@ -30,6 +32,8 @@ const VhumaniWaitlist = () => {
         handle: '',
         newsletter: false
       });
+      setShowSuccessPopup(true);
+      setTimeout(() => setShowSuccessPopup(false), 3000); // Hide after 3s
     },
     onError: (error: any) => {
       setMessage(error?.response?.data?.error || "Something went wrong.");
@@ -51,6 +55,8 @@ const VhumaniWaitlist = () => {
   };
 
   return (
+    <>
+      {showSuccessPopup && <WaitlistSuccessModal onClose={() => setShowSuccessPopup(false)} />}
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-4 md:p-8" id='waitlist'>
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -245,6 +251,7 @@ const VhumaniWaitlist = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
