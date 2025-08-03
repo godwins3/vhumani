@@ -52,10 +52,10 @@ const ContactUsPage = () => {
             <CardTitle className="text-blue-700 text-base">Contact Information</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-sm">
-            <p><strong>Email:</strong> support@vhumani.com</p>
+            <p><strong>Email:</strong> support@vhumani.app</p>
             <p><strong>Phone:</strong> +254 713 181 192</p>
             <p><strong>Business Hours:</strong> Mon–Fri, 9am–5pm (EAT)</p>
-            <p><strong>Location:</strong> Kenrail Towers, Nairobi, Kenya</p>
+            <p><strong>Location:</strong> One Padmore Place, Nairobi, Kenya</p>
             <iframe
               className="w-full h-48 rounded"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.999488051866!2d36.8189!3d-1.2921"
