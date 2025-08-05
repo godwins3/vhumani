@@ -60,7 +60,7 @@ const ContactUsPage = () => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.220769203852!2d36.80060529207424!3d-1.2976202733402778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109f9b9b53b9%3A0x3c43e99b8d68a79d!2sOne%20Padmore%20Place!5e0!3m2!1sen!2ske!4v1711012345678!5m2!1sen!2ske"
                 width="100%"
-                height="48"
+                height="400"
                 style={{ border: "0" }}
                 allowFullScreen
                 loading="lazy"
