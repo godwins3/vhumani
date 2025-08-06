@@ -33,8 +33,8 @@ const VhumaniFooter = () => {
 
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com/vhumani', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com/vhumani', label: 'Twitter' },
-    { icon: Instagram, href: 'https://instagram.com/vhumani', label: 'Instagram' },
+    { icon: Twitter, href: 'https://x.com/vhumani_co?s=11', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/vhuma_ni', label: 'Instagram' },
     { icon: Linkedin, href: 'https://linkedin.com/company/vhumani', label: 'LinkedIn' }
   ];
 
