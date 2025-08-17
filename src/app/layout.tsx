@@ -130,6 +130,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased min-h-screen flex flex-col`}
       >
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8937280226879055" crossOrigin="anonymous"></script>
         <ThemeProvider 
           attribute="class" 
           defaultTheme="system" 
