@@ -5,11 +5,13 @@ import OurStory from '@/components/about-us/our-story';
 import OurValues from '@/components/about-us/our-values';
 import VhumaniWaitlist from '@/components/home/vhunami-join-waitlist';
 import ClientTestimonialsSection from '@/components/home/what-client-say';
+import GoogleAd from '@/components/shared/google-ad';
 
 export default function AboutUs() {
   return (
     <div className="font-sans">
       <HeroSection />
+      {/* <GoogleAd adSlot='8937280226879055'/> */}
       <OurStory />
       {/* Our Vision */}
       <section className="bg-white dark:bg-slate-900 px-6 md:px-20 py-24 text-center mx-auto">
