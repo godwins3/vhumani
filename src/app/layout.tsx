@@ -10,6 +10,7 @@ import { EnhancedErrorBoundary } from "@/components/error-handling/error-boundar
 import SessionProvider from "@/providers/session-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
     'vhumani startups',
     'vhumani brands',
     'vhumani organizations',
-    
+
   ],
   authors: [{ name: 'Vhumani' }],
   creator: 'Vhumani',
@@ -130,11 +131,20 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased min-h-screen flex flex-col`}
       >
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8937280226879055" crossOrigin="anonymous"></script>
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system" 
-          enableSystem 
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8937280226879055" crossOrigin="anonymous"></script>
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "YOUR_CLARITY_ID_HERE");
+          `}
+        </Script>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           <SessionProvider>
@@ -143,7 +153,7 @@ export default function RootLayout({
               <QueryProvider>{children}</QueryProvider>
             </EnhancedErrorBoundary>
             <Toaster />
-        </SessionProvider>
+          </SessionProvider>
         </ThemeProvider>
       </body>
     </html>
