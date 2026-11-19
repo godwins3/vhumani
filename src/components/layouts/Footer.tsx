@@ -19,6 +19,7 @@ const VhumaniFooter = () => {
     ],
     company: [
       { label: 'About Us', href: '/about' },
+      { label: 'Team', href: '/about-us#team' },
       { label: 'Careers', href: '/careers' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' }
@@ -138,7 +139,16 @@ const VhumaniFooter = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             {/* Copyright */}
             <div className="text-sm text-gray-400">
-              © {currentYear} Vhumani. All rights reserved.
+              © {currentYear} Vhumani by{' '}
+              <a
+                href="https://aoristlabs.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors duration-200"
+              >
+                Aoristlabs
+              </a>
+              . All rights reserved.
             </div>
 
             {/* Legal Links */}

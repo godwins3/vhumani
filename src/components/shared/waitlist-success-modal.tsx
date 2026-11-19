@@ -49,7 +49,7 @@ const WaitlistSuccessModal: React.FC<WaitlistSuccessModalProps> = ({ onClose }) 
         </div>
 
         <div className="text-xs text-gray-400 mt-4">
-          © 2025 Vhumani. All rights reserved.
+          © {new Date().getFullYear()} Vhumani by Aoristlabs. All rights reserved.
         </div>
       </div>
     </div>

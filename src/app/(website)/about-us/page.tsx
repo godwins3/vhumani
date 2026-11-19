@@ -2,6 +2,7 @@ import HeroSection from '@/components/about-us/hero-section';
 import HowVhumaniWorks from '@/components/about-us/how-vhumani-works';
 import OurImpact from '@/components/about-us/our-impact';
 import OurStory from '@/components/about-us/our-story';
+import OurTeam from '@/components/about-us/our-team';
 import OurValues from '@/components/about-us/our-values';
 import VhumaniWaitlist from '@/components/home/vhunami-join-waitlist';
 import ClientTestimonialsSection from '@/components/home/what-client-say';
@@ -24,6 +25,7 @@ export default function AboutUs() {
       </section>
       <HowVhumaniWorks />
       <OurValues />
+      <OurTeam />
       <OurImpact />
       <ClientTestimonialsSection />
       <VhumaniWaitlist />
