@@ -24,7 +24,7 @@ const OurStory = () => {
             partnerships.
           </p>
           <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-            Founded in 2020, our platform has grown from a small startup to a
+            Founded in 2025, our platform has grown from a small startup to a
             trusted marketplace where brands find authentic voices and influencers
             discover meaningful collaborations.
           </p>
