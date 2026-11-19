@@ -18,11 +18,13 @@ const team: TeamMember[] = [
   {
     name: "Michael Odhiambo",
     role: "Designer",
+    image: "/teams/mike.jpeg",
     gradient: "from-blue-500 to-purple-500",
   },
   {
     name: "Billbright Yego",
     role: "Content Manager",
+    image: "/teams/bill.jpeg",
     gradient: "from-green-500 to-teal-500",
   },
 ];
